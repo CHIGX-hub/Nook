@@ -6,15 +6,14 @@
 <title>インテリア・ソウル診断 — NOOK</title>
 <meta name="description" content="7つの質問に答えるだけで、あなたにぴったりのインテリアスタイルが分かります。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+<style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 :root{--cr:#F5F0E8;--dk:#1A1814;--wm:#C8A97E;--ac:#8B6F47;--mu:#9A9189;--lb:#E8DFD0;--bd:rgba(200,169,126,0.25);}
 html{scroll-behavior:smooth;}
 body{background:var(--cr);color:var(--dk);font-family:'DM Sans',sans-serif;line-height:1.6;overflow-x:hidden;}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:flex;align-items:center;justify-content:space-between;background:rgba(245,240,232,0.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd);}
-.logo{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:0.18em;color:var(--dk);text-decoration:none;}
+.logo{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:.18em;color:var(--dk);text-decoration:none;}
 .nav-r{display:flex;gap:28px;}
-.nav-r a{font-size:11px;letter-spacing:0.1em;color:var(--mu);text-decoration:none;text-transform:uppercase;transition:color .2s;}
+.nav-r a{font-size:11px;letter-spacing:.1em;color:var(--mu);text-decoration:none;text-transform:uppercase;transition:color .2s;}
 .nav-r a:hover{color:var(--dk);}
 .btn{display:inline-block;padding:13px 32px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:all .25s;border:none;}
 .btn-d{background:var(--dk);color:var(--cr);}
@@ -25,14 +24,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 .sec-hd{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:36px;border-bottom:1px solid var(--bd);padding-bottom:14px;}
 .sec-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:400;}
 .sec-title em{font-style:italic;color:var(--ac);}
-.see-all{font-size:10px;color:var(--mu);text-transform:uppercase;text-decoration:none;border-bottom:0.5px solid var(--mu);padding-bottom:2px;white-space:nowrap;}
+.see-all{font-size:10px;color:var(--mu);text-transform:uppercase;text-decoration:none;border-bottom:.5px solid var(--mu);padding-bottom:2px;white-space:nowrap;}
 .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
-.cat5{position:relative;border-radius:4px;aspect-ratio:2/3;overflow:hidden;cursor:pointer;text-decoration:none;display:block;transition:transform .35s;}
+.cat5{position:relative;border-radius:4px;aspect-ratio:2/3;overflow:hidden;text-decoration:none;display:block;transition:transform .35s;}
 .cat5:hover{transform:translateY(-6px);}
 .cat5:hover .ov{opacity:.5;}
-.cat5 .cbg-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
+.cbg-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;}
 .cat5:hover .cbg-img{transform:scale(1.06);}
-.cbg{width:100%;height:100%;}
 .ov{position:absolute;inset:0;background:rgba(26,24,20,.35);opacity:.22;transition:opacity .3s;}
 .clbl{position:absolute;bottom:0;left:0;right:0;padding:14px 10px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:white;}
 .clbl h3{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;}
@@ -54,7 +52,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 40px;display:fl
 .rg-name{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;line-height:1.3;margin-bottom:6px;color:var(--dk);}
 .rg-desc{font-size:11px;color:var(--mu);line-height:1.55;margin-bottom:10px;flex:1;}
 .rg-footer{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:auto;}
-.rg-price{font-family:'Playfair Display',serif;font-size:14px;font-weight:400;color:var(--dk);white-space:nowrap;}
+.rg-price{font-family:'Playfair Display',serif;font-size:14px;color:var(--dk);white-space:nowrap;}
 .rg-btn a{display:inline-block;background:#f76956;color:#fff;font-size:9px;font-weight:500;padding:8px 12px;border-radius:3px;text-decoration:none;white-space:nowrap;transition:opacity .2s;}
 .rg-btn a:hover{opacity:.85;}
 .fbar{padding:48px 40px;background:var(--lb);display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
@@ -97,126 +95,39 @@ footer{background:var(--dk);color:var(--cr);padding:56px 40px 28px;}
   .rg-btn a{font-size:9px;padding:7px 10px;}
   .fbar{grid-template-columns:1fr;padding:36px 18px;gap:24px;}
   footer{padding:40px 18px 20px;}.ft{grid-template-columns:1fr 1fr;gap:24px;}
-  .ph{padding:100px 18px 48px;}
-  .bc{padding:76px 18px 0;}
+  .ph{padding:100px 18px 48px;}.bc{padding:76px 18px 0;}
 }
 @media(max-width:480px){
   .grid5{grid-template-columns:repeat(2,1fr);}
   .rg-grid{grid-template-columns:1fr 1fr;}
   .ft{grid-template-columns:1fr;}
-}
-
-.ph{padding:120px 40px 56px;text-align:center;background:linear-gradient(160deg,#f0ede5,#e8e0d4);}
-.ph-content{position:relative;z-index:1;}
-.ph-ey{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--wm);margin-bottom:14px;}
-.ph-t{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);font-weight:400;line-height:1.1;margin-bottom:14px;}
-.ph-t em{font-style:italic;color:var(--ac);}
-.ph-d{font-size:14px;color:var(--mu);max-width:440px;margin:0 auto;line-height:1.75;}
-.dw{max-width:700px;margin:0 auto;padding:0 40px 96px;}
-.prog-bar{height:3px;background:var(--lb);border-radius:2px;margin-bottom:44px;}
-.prog-fill{height:3px;background:var(--ac);border-radius:2px;transition:width .4s ease;}
-.qc{display:none;animation:fi .4s ease;}
-.qc.active{display:block;}
-@keyframes fi{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
-.qn{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--wm);margin-bottom:10px;}
-.qt{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;line-height:1.3;margin-bottom:28px;}
-.qt em{font-style:italic;color:var(--ac);}
-.opts{display:flex;flex-direction:column;gap:10px;}
-.opt{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;border:1px solid var(--bd);border-radius:4px;cursor:pointer;transition:all .2s;background:white;}
-.opt:hover,.opt.selected{border-color:var(--ac);background:#fdf9f4;}
-.opt.selected{box-shadow:0 0 0 1px var(--ac);}
-.ok{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ac);min-width:18px;}
-.ot{font-size:13px;color:var(--dk);line-height:1.6;padding-top:1px;}
-.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
-.nbtn{padding:11px 28px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .25s;border:none;}
-.nbtn-d{background:var(--dk);color:var(--cr);}
-.nbtn-d:hover{background:var(--ac);}
-.nbtn-o{background:transparent;color:var(--dk);border:1px solid rgba(26,24,20,.35);}
-.nbtn:disabled{opacity:.35;cursor:not-allowed;}
-.qstep{font-size:11px;color:var(--mu);}
-.rw{display:none;text-align:center;padding:32px 0;}
-.rbadge{display:inline-block;padding:5px 16px;background:var(--lb);border-radius:2px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:16px;}
-.rtitle{font-family:'Playfair Display',serif;font-size:30px;font-weight:400;margin-bottom:8px;}
-.rtitle em{font-style:italic;color:var(--ac);}
-.rsub-text{font-size:14px;color:var(--mu);line-height:1.75;max-width:460px;margin:0 auto 24px;}
-.rimg{width:100%;max-width:360px;aspect-ratio:4/3;border-radius:4px;margin:0 auto 24px;overflow:hidden;}
-.rimg img{width:100%;height:100%;object-fit:cover;display:block;}
-.sp{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0 28px;text-align:left;}
-.spc{padding:14px 16px;border:1px solid var(--bd);border-radius:4px;background:white;}
-.spc h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:400;margin-bottom:4px;}
-.spc p{font-size:11px;color:var(--mu);line-height:1.55;}
-.rbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
-.guide{margin:56px 0 0;}
-.guide-t{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;margin-bottom:6px;}
-.guide-t em{font-style:italic;color:var(--ac);}
-.guide-d{font-size:13px;color:var(--mu);margin-bottom:24px;}
-.gg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
-.gc{padding:16px 18px;border:1px solid var(--bd);border-radius:4px;background:white;}
-.gc h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:400;margin-bottom:5px;}
-.gkw{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:5px;}
-.gc p{font-size:11px;color:var(--mu);line-height:1.6;}
-@media(max-width:768px){.dw{padding:0 18px 80px;}.sp{grid-template-columns:1fr;}.gg{grid-template-columns:1fr;}.ph{padding:96px 18px 44px;}}
-</style>
+}.ph{padding:120px 40px 56px;text-align:center;background:linear-gradient(160deg,#f0ede5,#e8e0d4);}.ph-content{position:relative;z-index:1;}.ph-ey{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--wm);margin-bottom:14px;}.ph-t{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);font-weight:400;line-height:1.1;margin-bottom:14px;}.ph-t em{font-style:italic;color:var(--ac);}.ph-d{font-size:14px;color:var(--mu);max-width:440px;margin:0 auto;line-height:1.75;}
+.dw{max-width:700px;margin:0 auto;padding:0 40px 96px;}.prog-bar{height:3px;background:var(--lb);border-radius:2px;margin-bottom:44px;}.prog-fill{height:3px;background:var(--ac);border-radius:2px;transition:width .4s ease;}.qc{display:none;animation:fi .4s ease;}.qc.active{display:block;}@keyframes fi{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.qn{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--wm);margin-bottom:10px;}.qt{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;line-height:1.3;margin-bottom:28px;}.qt em{font-style:italic;color:var(--ac);}.opts{display:flex;flex-direction:column;gap:10px;}.opt{display:flex;align-items:flex-start;gap:14px;padding:14px 18px;border:1px solid var(--bd);border-radius:4px;cursor:pointer;transition:all .2s;background:white;}.opt:hover,.opt.selected{border-color:var(--ac);background:#fdf9f4;}.opt.selected{box-shadow:0 0 0 1px var(--ac);}.ok{font-family:'Playfair Display',serif;font-size:15px;font-style:italic;color:var(--ac);min-width:18px;}.ot{font-size:13px;color:var(--dk);line-height:1.6;padding-top:1px;}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}.nbtn{padding:11px 28px;border-radius:2px;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .25s;border:none;}.nbtn-d{background:var(--dk);color:var(--cr);}.nbtn-d:hover{background:var(--ac);}.nbtn-o{background:transparent;color:var(--dk);border:1px solid rgba(26,24,20,.35);}.nbtn:disabled{opacity:.35;cursor:not-allowed;}.qstep{font-size:11px;color:var(--mu);}
+.rw{display:none;text-align:center;padding:32px 0;}.rbadge{display:inline-block;padding:5px 16px;background:var(--lb);border-radius:2px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin-bottom:16px;}.rtitle{font-family:'Playfair Display',serif;font-size:30px;font-weight:400;margin-bottom:8px;}.rtitle em{font-style:italic;color:var(--ac);}.rsub-t{font-size:14px;color:var(--mu);line-height:1.75;max-width:460px;margin:0 auto 24px;}.rimg{width:100%;max-width:360px;aspect-ratio:4/3;border-radius:4px;margin:0 auto 24px;overflow:hidden;}.rimg img{width:100%;height:100%;object-fit:cover;display:block;}
+.sp{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:20px 0 28px;text-align:left;}.spc{padding:14px 16px;border:1px solid var(--bd);border-radius:4px;background:white;}.spc h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:400;margin-bottom:4px;}.spc p{font-size:11px;color:var(--mu);line-height:1.55;}.rbtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.guide{margin:56px 0 0;}.guide-t{font-family:'Playfair Display',serif;font-size:24px;font-weight:400;margin-bottom:6px;}.guide-t em{font-style:italic;color:var(--ac);}.guide-d{font-size:13px;color:var(--mu);margin-bottom:24px;}.gg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}.gc{padding:16px 18px;border:1px solid var(--bd);border-radius:4px;background:white;}.gc h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:400;margin-bottom:5px;}.gkw{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ac);margin-bottom:5px;}.gc p{font-size:11px;color:var(--mu);line-height:1.6;}
+@media(max-width:768px){.dw{padding:0 18px 80px;}.sp{grid-template-columns:1fr;}.gg{grid-template-columns:1fr;}.ph{padding:96px 18px 44px;}}</style>
 </head>
-<body>
-<nav><a href="index.html" class="logo">NOOK</a><div class="nav-r"><a href="diagnosis.html">診断</a><a href="about.html">About us</a></div></nav>
-<section class="ph"><div class="ph-content"><p class="ph-ey">Interior Soul Diagnosis</p><h1 class="ph-t">インテリア・<em>ソウル診断</em></h1><p class="ph-d">7つの質問に答えるだけで、あなたの部屋スタイルが分かります。所要時間は約2分。</p></div></section>
-<div class="dw">
-<div class="prog-bar"><div class="prog-fill" id="prog" style="width:0%"></div></div>
-<div class="qc active" data-q="0"><p class="qn">Question 01 / 07</p><h2 class="qt">休日、<em>理想の過ごし方</em>は？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">お気に入りのカフェで読書、または整理整頓をしてスッキリ過ごす。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">都会のホテルのラウンジで、洗練された空間と夜景を楽しむ。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">趣味のガレージや古着屋で、一点モノの宝探しをする。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">海辺の散歩やキャンプ、植物の手入れをして自然を感じる。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">格式高いレストランや、伝統を感じる静かな空間で背筋を伸ばす。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">お花を飾って、手作りのスイーツと紅茶でゆっくりティータイム。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" disabled>← 戻る</button><span class="qstep">1 / 7</span><button class="nbtn nbtn-d" id="n0">次へ →</button></div></div>
-<div class="qc" data-q="1"><p class="qn">Question 02 / 07</p><h2 class="qt">部屋の「<em>壁</em>」を飾るなら？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">シンプルな木製フレームのアート、または何も飾らず余白を楽しむ。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">大きなモノクロ写真や、光沢のあるモダンなミラー。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">無骨なアイアンの棚や、少し錆びたブリキの看板。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">マクラメ編みのタペストリーや、流木、たくさんのハンギングプランツ。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">繊細な和紙のアート、あるいは豪華な装飾の額縁。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">ドライフラワーのスワッグや、パステルカラーの可愛いイラスト。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(1)">← 戻る</button><span class="qstep">2 / 7</span><button class="nbtn nbtn-d" id="n1">次へ →</button></div></div>
-<div class="qc" data-q="2"><p class="qn">Question 03 / 07</p><h2 class="qt">家具を選ぶとき、最も<em>重視するポイント</em>は？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">機能性と、圧迫感のない明るい色味。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">直線的なフォルムと、高級感のある素材（ガラス・スチール）。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">「経年変化」を楽しめる、使い込まれた質感やレトロさ。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">ラタンや麻など、触り心地がよくリラックスできる天然素材。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">重厚感があり、空間の主役になるような存在感。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">角が丸いデザインや、アンティークのような塗装。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(2)">← 戻る</button><span class="qstep">3 / 7</span><button class="nbtn nbtn-d" id="n2">次へ →</button></div></div>
-<div class="qc" data-q="3"><p class="qn">Question 04 / 07</p><h2 class="qt">理想の「<em>照明</em>」はどんなタイプ？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">柔らかい光のペンダントライトや、シンプルなスポットライト。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">存在感を消したダウンライトや、シャープなスタンドライト。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">エジソン電球（裸電球）や、50年代風のヴィンテージランプ。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">間接照明を多用した、木漏れ日のような温かい光。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">豪華なシャンデリア、または行燈のような静かな光。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">シャビーなシャンデリアや、布シェードの可愛いランプ。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(3)">← 戻る</button><span class="qstep">4 / 7</span><button class="nbtn nbtn-d" id="n3">次へ →</button></div></div>
-<div class="qc" data-q="4"><p class="qn">Question 05 / 07</p><h2 class="qt">部屋の「<em>床</em>」はどうしたい？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">明るいオーク材のフローリングに、シンプルなラグ。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">グレーのタイルや、光沢のある大理石調。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">節のあるダークブラウンの古材風、またはコンクリート。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">テラコッタタイルや、ジュート（麻）のラグ。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">質の高い畳、あるいは毛足の長いフカフカの絨毯。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">ホワイト塗装の板張りや、柄入りのクッションフロア。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(4)">← 戻る</button><span class="qstep">5 / 7</span><button class="nbtn nbtn-d" id="n4">次へ →</button></div></div>
-<div class="qc" data-q="5"><p class="qn">Question 06 / 07</p><h2 class="qt">あなたの<em>性格</em>を例えるなら？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">合理的で誠実。清潔感を大切にする。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">クールで都会的。無駄なものは持ちたくない。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">凝り性で個性的。こだわりが強く、自分らしさを大事にする。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">自由奔放で穏やか。心身の癒やしを優先する。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">礼儀正しく、本物志向。上質な暮らしに憧れる。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">感受性豊かで優しい。可愛いものに囲まれると幸せ。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(5)">← 戻る</button><span class="qstep">6 / 7</span><button class="nbtn nbtn-d" id="n5">次へ →</button></div></div>
-<div class="qc" data-q="6"><p class="qn">Question 07 / 07</p><h2 class="qt">部屋に招いた友人に、<em>何と言われたい</em>？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">「センスいいし、すごく居心地が良くて落ち着くね！」</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">「モデルルームみたい！生活感なくてカッコいい。」</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">「隠れ家ショップみたいで、こだわりがすごい！」</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">「まるで旅行に来たみたい。リラックスしちゃう。」</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">「高級感があって、特別な気分になれる場所だね。」</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">「可愛くてお洒落！映画に出てきそうなお部屋。」</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(6)">← 戻る</button><span class="qstep">7 / 7</span><button class="nbtn nbtn-d" id="n6">結果を見る</button></div></div>
-<div class="rw" id="result">
-<div class="rbadge" id="rb">診断結果</div><h2 class="rtitle" id="rt"></h2><p class="rsub-text" id="rs"></p>
-<div class="rimg" id="ri"></div>
-<div style="text-align:left;margin-bottom:8px;font-size:12px;color:var(--mu);">あなたに近いスタイル</div>
-<div class="sp" id="sp"></div>
-<div class="rbtns"><a href="all-products.html" class="nbtn nbtn-d">おすすめ商品を見る</a><button class="nbtn nbtn-o" onclick="reset()">もう一度診断する</button></div>
-</div>
-<div class="guide"><h3 class="guide-t">全18スタイル<em>完全ガイド</em></h3><p class="guide-d">18種類すべてのインテリアスタイルをまとめました。</p>
-<div class="gg">
-<div class="gc"><p class="gkw">01 · Nordic</p><h4>北欧スタイル</h4><p>機能性と幸福感が共存。白・オーク・アースカラーで揃え、Yチェアや名作照明がアイコン。</p></div>
-<div class="gc"><p class="gkw">02 · Natural</p><h4>ナチュラルスタイル</h4><p>天然木・綿・麻で自然の安心感を。ベージュとライトブラウンを基調に温かみのある空間を。</p></div>
-<div class="gc"><p class="gkw">03 · Modern</p><h4>モダンスタイル</h4><p>黒・白・グレー・シルバーで都会的に。ガラス天板とレザーソファが決め手。</p></div>
-<div class="gc"><p class="gkw">04 · Japanese Modern</p><h4>和モダンスタイル</h4><p>畳・障子・木格子を現代風に。墨色と白木で静寂の美を表現する。</p></div>
-<div class="gc"><p class="gkw">05 · Vintage</p><h4>ヴィンテージスタイル</h4><p>ダークブラウンと革の渋み。経年変化を楽しむキャメル革ソファと古材が主役。</p></div>
-<div class="gc"><p class="gkw">06 · Industrial</p><h4>インダストリアルスタイル</h4><p>鉄・コンクリート・剥き出しの配管。アイアン脚の家具とエジソン電球で無骨な空間に。</p></div>
-<div class="gc"><p class="gkw">07 · Simple Modern</p><h4>シンプルモダンスタイル</h4><p>究極の引き算。収納をすべて隠し、直線的な家具だけを置くミニマリストの完成形。</p></div>
-<div class="gc"><p class="gkw">08 · Japandi</p><h4>ジャパンディスタイル</h4><p>和×北欧。グレージュとマットな木目が融合した、今最も人気の静のスタイル。</p></div>
-<div class="gc"><p class="gkw">09 · Korean</p><h4>韓国スタイル</h4><p>アイボリーとベージュの淡い空間。ウェーブミラーと丸いフォルムで映えを演出。</p></div>
-<div class="gc"><p class="gkw">10 · Mid-Century</p><h4>ミッドセンチュリースタイル</h4><p>1950年代の近未来感。イームズチェアや幾何学模様がオレンジ・深木目と融合。</p></div>
-<div class="gc"><p class="gkw">11 · Bohemian</p><h4>ボヘミアンスタイル</h4><p>民族柄・多色使いで旅人のような自由な空間。マクラメとキリム柄のラグが定番。</p></div>
-<div class="gc"><p class="gkw">12 · Hotel-like</p><h4>ホテルライクスタイル</h4><p>左右対称の整然とした非日常空間。間接照明とフットスローで高級ホテルを再現。</p></div>
-<div class="gc"><p class="gkw">13 · Luxury</p><h4>ラグジュアリースタイル</h4><p>ゴールド・紫・大理石で豪華に。シャンデリアと大理石テーブルが成功者の空間を演出。</p></div>
-<div class="gc"><p class="gkw">14 · Resort</p><h4>リゾートスタイル</h4><p>ラタンとアジアン家具でバリ島風の開放感。ダークブラウンとグリーンで南国の別荘に。</p></div>
-<div class="gc"><p class="gkw">15 · Botanical</p><h4>ボタニカルスタイル</h4><p>植物が主役の癒やしの森。巨大な観葉植物とテラコッタ鉢で緑に包まれた空間を。</p></div>
-<div class="gc"><p class="gkw">16 · Country</p><h4>カントリースタイル</h4><p>パイン材とチェック柄の素朴な温かさ。赤毛のアンのような家庭的な雰囲気が魅力。</p></div>
-<div class="gc"><p class="gkw">17 · West Coast</p><h4>西海岸スタイル</h4><p>褪せたブルーと流木、デニムソファで太陽と海のカリフォルニアを部屋に。</p></div>
-<div class="gc"><p class="gkw">18 · Shabby Chic</p><h4>シャビーシックスタイル</h4><p>剥げた白塗装にレースとアンティーク。猫脚家具とドライフラワーで優雅に。</p></div>
-</div></div>
-</div>
-<footer>
-<div class="ft">
-  <div><div class="fbrand">NOOK</div><p class="ftag">あなただけの隠れ家を作るための、インテリアコーディネートサービス。</p></div>
-  <div class="fc"><h5>系統から選ぶ</h5><a href="nordic.html">北欧</a><a href="natural.html">ナチュラル</a><a href="modern.html">モダン</a><a href="japanese.html">和</a><a href="others.html">その他</a></div>
-  <div class="fc"><h5>物から選ぶ</h5><a href="wall.html">壁面装飾</a><a href="fabric.html">ファブリック</a><a href="lighting.html">照明</a><a href="plants.html">植物</a><a href="goods.html">雑貨</a></div>
-  <div class="fc"><h5>その他</h5><a href="all-products.html">全商品</a><a href="diagnosis.html">診断</a><a href="about.html">About us</a><a href="privacy.html">プライバシーポリシー</a></div>
-</div>
-<div class="fb"><span>© 2026 NOOK. All rights reserved.</span><span>当サイトはアフィリエイト広告（楽天アフィリエイト含む）を掲載しています。</span></div>
-</footer>
+<body><nav><a href="index.html" class="logo">NOOK</a><div class="nav-r"><a href="diagnosis.html">診断</a><a href="about.html">About us</a></div></nav><section class="ph"><div class="ph-content"><p class="ph-ey">Interior Soul Diagnosis</p><h1 class="ph-t">インテリア・<em>ソウル診断</em></h1><p class="ph-d">7つの質問に答えるだけで、あなたの部屋スタイルが分かります。所要時間は約2分。</p></div></section>
+<div class="dw"><div class="prog-bar"><div class="prog-fill" id="prog" style="width:0%"></div></div><div class="qc active" data-q="0"><p class="qn">Question 01 / 07</p><h2 class="qt">休日、<em>理想の過ごし方</em>は？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">お気に入りのカフェで読書、または整理整頓をしてスッキリ過ごす。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">都会のホテルのラウンジで、洗練された空間と夜景を楽しむ。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">趣味のガレージや古着屋で、一点モノの宝探しをする。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">海辺の散歩やキャンプ、植物の手入れをして自然を感じる。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">格式高いレストランや、伝統を感じる静かな空間で背筋を伸ばす。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">お花を飾って、手作りのスイーツと紅茶でゆっくりティータイム。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" disabled>← 戻る</button><span class="qstep">1 / 7</span><button class="nbtn nbtn-d" id="n0">次へ →</button></div></div><div class="qc" data-q="1"><p class="qn">Question 02 / 07</p><h2 class="qt">部屋の「<em>壁</em>」を飾るなら？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">シンプルな木製フレームのアート、または何も飾らず余白を楽しむ。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">大きなモノクロ写真や、光沢のあるモダンなミラー。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">無骨なアイアンの棚や、少し錆びたブリキの看板。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">マクラメ編みのタペストリーや、流木、たくさんのハンギングプランツ。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">繊細な和紙のアート、あるいは豪華な装飾の額縁。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">ドライフラワーのスワッグや、パステルカラーの可愛いイラスト。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(1)">← 戻る</button><span class="qstep">2 / 7</span><button class="nbtn nbtn-d" id="n1">次へ →</button></div></div><div class="qc" data-q="2"><p class="qn">Question 03 / 07</p><h2 class="qt">家具を選ぶとき、最も<em>重視するポイント</em>は？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">機能性と、圧迫感のない明るい色味。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">直線的なフォルムと、高級感のある素材（ガラス・スチール）。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">「経年変化」を楽しめる、使い込まれた質感やレトロさ。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">ラタンや麻など、触り心地がよくリラックスできる天然素材。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">重厚感があり、空間の主役になるような存在感。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">角が丸いデザインや、アンティークのような塗装。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(2)">← 戻る</button><span class="qstep">3 / 7</span><button class="nbtn nbtn-d" id="n2">次へ →</button></div></div><div class="qc" data-q="3"><p class="qn">Question 04 / 07</p><h2 class="qt">理想の「<em>照明</em>」はどんなタイプ？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">柔らかい光のペンダントライトや、シンプルなスポットライト。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">存在感を消したダウンライトや、シャープなスタンドライト。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">エジソン電球（裸電球）や、50年代風のヴィンテージランプ。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">間接照明を多用した、木漏れ日のような温かい光。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">豪華なシャンデリア、または行燈のような静かな光。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">シャビーなシャンデリアや、布シェードの可愛いランプ。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(3)">← 戻る</button><span class="qstep">4 / 7</span><button class="nbtn nbtn-d" id="n3">次へ →</button></div></div><div class="qc" data-q="4"><p class="qn">Question 05 / 07</p><h2 class="qt">部屋の「<em>床</em>」はどうしたい？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">明るいオーク材のフローリングに、シンプルなラグ。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">グレーのタイルや、光沢のある大理石調。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">節のあるダークブラウンの古材風、またはコンクリート。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">テラコッタタイルや、ジュート（麻）のラグ。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">質の高い畳、あるいは毛足の長いフカフカの絨毯。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">ホワイト塗装の板張りや、柄入りのクッションフロア。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(4)">← 戻る</button><span class="qstep">5 / 7</span><button class="nbtn nbtn-d" id="n4">次へ →</button></div></div><div class="qc" data-q="5"><p class="qn">Question 06 / 07</p><h2 class="qt">あなたの<em>性格</em>を例えるなら？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">合理的で誠実。清潔感を大切にする。</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">クールで都会的。無駄なものは持ちたくない。</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">凝り性で個性的。こだわりが強く、自分らしさを大事にする。</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">自由奔放で穏やか。心身の癒やしを優先する。</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">礼儀正しく、本物志向。上質な暮らしに憧れる。</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">感受性豊かで優しい。可愛いものに囲まれると幸せ。</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(5)">← 戻る</button><span class="qstep">6 / 7</span><button class="nbtn nbtn-d" id="n5">次へ →</button></div></div><div class="qc" data-q="6"><p class="qn">Question 07 / 07</p><h2 class="qt">部屋に招いた友人に、<em>何と言われたい</em>？</h2><div class="opts"><div class="opt" data-val="A"><span class="ok">A</span><span class="ot">「センスいいし、すごく居心地が良くて落ち着くね！」</span></div><div class="opt" data-val="B"><span class="ok">B</span><span class="ot">「モデルルームみたい！生活感なくてカッコいい。」</span></div><div class="opt" data-val="C"><span class="ok">C</span><span class="ot">「隠れ家ショップみたいで、こだわりがすごい！」</span></div><div class="opt" data-val="D"><span class="ok">D</span><span class="ot">「まるで旅行に来たみたい。リラックスしちゃう。」</span></div><div class="opt" data-val="E"><span class="ok">E</span><span class="ot">「高級感があって、特別な気分になれる場所だね。」</span></div><div class="opt" data-val="F"><span class="ok">F</span><span class="ot">「可愛くてお洒落！映画に出てきそうなお部屋。」</span></div></div><div class="qnav"><button class="nbtn nbtn-o" onclick="goBack(6)">← 戻る</button><span class="qstep">7 / 7</span><button class="nbtn nbtn-d" id="n6">結果を見る</button></div></div>
+<div class="rw" id="result"><div class="rbadge" id="rb">診断結果</div><h2 class="rtitle" id="rt"></h2><p class="rsub-t" id="rs"></p><div class="rimg" id="ri"></div><div style="text-align:left;margin-bottom:8px;font-size:12px;color:var(--mu);">あなたに近いスタイル</div><div class="sp" id="sp"></div><div class="rbtns"><a href="all-products.html" class="nbtn nbtn-d">おすすめ商品を見る</a><button class="nbtn nbtn-o" onclick="reset()">もう一度診断する</button></div></div>
+<div class="guide"><h3 class="guide-t">全18スタイル<em>完全ガイド</em></h3><p class="guide-d">18種類すべてのインテリアスタイルをまとめました。</p><div class="gg"><div class="gc"><p class="gkw">01·Nordic</p><h4>北欧スタイル</h4><p>機能性と幸福感が共存。白・オーク・アースカラーで揃え、Yチェアや名作照明がアイコン。</p></div><div class="gc"><p class="gkw">02·Natural</p><h4>ナチュラルスタイル</h4><p>天然木・綿・麻で自然の安心感を。ベージュとライトブラウンを基調に温かみのある空間を。</p></div><div class="gc"><p class="gkw">03·Modern</p><h4>モダンスタイル</h4><p>黒・白・グレー・シルバーで都会的に。ガラス天板とレザーソファが決め手。</p></div><div class="gc"><p class="gkw">04·Japanese</p><h4>和モダンスタイル</h4><p>畳・障子・木格子を現代風に。墨色と白木で静寂の美を表現する。</p></div><div class="gc"><p class="gkw">05·Vintage</p><h4>ヴィンテージスタイル</h4><p>ダークブラウンと革の渋み。経年変化を楽しむキャメル革ソファと古材が主役。</p></div><div class="gc"><p class="gkw">06·Industrial</p><h4>インダストリアル</h4><p>鉄・コンクリート・剥き出しの配管。アイアン脚の家具とエジソン電球で無骨な空間に。</p></div><div class="gc"><p class="gkw">07·Simple</p><h4>シンプルモダン</h4><p>究極の引き算。収納をすべて隠し、直線的な家具だけを置くミニマリストの完成形。</p></div><div class="gc"><p class="gkw">08·Japandi</p><h4>ジャパンディスタイル</h4><p>和×北欧。グレージュとマットな木目が融合した、今最も人気の静のスタイル。</p></div><div class="gc"><p class="gkw">09·Korean</p><h4>韓国スタイル</h4><p>アイボリーとベージュの淡い空間。ウェーブミラーと丸いフォルムで映えを演出。</p></div><div class="gc"><p class="gkw">10·MidCentury</p><h4>ミッドセンチュリー</h4><p>1950年代の近未来感。イームズチェアや幾何学模様がオレンジ・深木目と融合。</p></div><div class="gc"><p class="gkw">11·Bohemian</p><h4>ボヘミアン</h4><p>民族柄・多色使いで旅人のような自由な空間。マクラメとキリム柄のラグが定番。</p></div><div class="gc"><p class="gkw">12·Hotel</p><h4>ホテルライク</h4><p>左右対称の整然とした非日常空間。間接照明とフットスローで高級ホテルを再現。</p></div><div class="gc"><p class="gkw">13·Luxury</p><h4>ラグジュアリー</h4><p>ゴールド・紫・大理石で豪華に。シャンデリアと大理石テーブルが成功者の空間を演出。</p></div><div class="gc"><p class="gkw">14·Resort</p><h4>リゾート</h4><p>ラタンとアジアン家具でバリ島風の開放感。ダークブラウンとグリーンで南国の別荘に。</p></div><div class="gc"><p class="gkw">15·Botanical</p><h4>ボタニカル</h4><p>植物が主役の癒やしの森。巨大な観葉植物とテラコッタ鉢で緑に包まれた空間を。</p></div><div class="gc"><p class="gkw">16·Country</p><h4>カントリー</h4><p>パイン材とチェック柄の素朴な温かさ。赤毛のアンのような家庭的な雰囲気が魅力。</p></div><div class="gc"><p class="gkw">17·WestCoast</p><h4>西海岸スタイル</h4><p>褪せたブルーと流木、デニムソファで太陽と海のカリフォルニアを部屋に。</p></div><div class="gc"><p class="gkw">18·ShabbyChic</p><h4>シャビーシック</h4><p>剥げた白塗装にレースとアンティーク。猫脚家具とドライフラワーで優雅に。</p></div></div></div></div><footer><div class="ft">
+<div><div class="fbrand">NOOK</div><p class="ftag">あなただけの隠れ家を作るための、インテリアコーディネートサービス。</p></div>
+<div class="fc"><h5>系統から選ぶ</h5><a href="nordic.html">北欧</a><a href="natural.html">ナチュラル</a><a href="modern.html">モダン</a><a href="japanese.html">和</a><a href="others.html">その他</a></div>
+<div class="fc"><h5>物から選ぶ</h5><a href="wall.html">壁面装飾</a><a href="fabric.html">ファブリック</a><a href="lighting.html">照明</a><a href="plants.html">植物</a><a href="goods.html">雑貨</a></div>
+<div class="fc"><h5>その他</h5><a href="all-products.html">全商品</a><a href="diagnosis.html">診断</a><a href="about.html">About us</a><a href="privacy.html">プライバシーポリシー</a></div>
+</div><div class="fb"><span>© 2026 NOOK. All rights reserved.</span><span>当サイトはアフィリエイト広告（楽天アフィリエイト含む）を掲載しています。</span></div></footer>
 <script>
 const ans=Array(7).fill(null);
 const R={
-A:{title:'シンプル＆ナチュラル派',sub:'清潔感と温もりを大切にするあなたには、機能的でありながら自然素材の温かみを感じる空間が似合います。',img:'diag-type-a.png',picks:[{n:'北欧スタイル',d:'機能的で明るい。差し色にブルーやイエローを。'},{n:'ナチュラルスタイル',d:'木の温もり全開。最も標準的で落ち着く定番。'},{n:'ジャパンディスタイル',d:'和×北欧の融合。今一番人気の静のスタイル。'},{n:'韓国スタイル',d:'白×ベージュ。丸いフォルムと淡い空間が特徴。'}]},
-B:{title:'クール＆スタイリッシュ派',sub:'無駄を嫌い、洗練されたものを好むあなたには、モノトーンで構成されたスタイリッシュな空間がぴったり。',img:'diag-type-b.png',picks:[{n:'モダンスタイル',d:'モノトーン・ガラス・金属で都会の夜が似合う空間。'},{n:'シンプルモダン',d:'装飾ゼロ。ミニマリストの究極形。'},{n:'ホテルライク',d:'左右対称の美。高級ホテルのような整然とした空間。'},{n:'インダストリアル',d:'鉄とコンクリート。無骨でクールな工場系スタイル。'}]},
-C:{title:'レトロ＆ラフ派',sub:'こだわりが強く自分らしさを大切にするあなたには、経年変化や歴史を感じる素材感のある空間が合います。',img:'diag-type-c.png',picks:[{n:'ヴィンテージスタイル',d:'濃い茶色と革。歴史を感じる渋いスタイル。'},{n:'インダストリアル',d:'鉄・コンクリート・剥き出しの配管。工場のような無骨さ。'},{n:'ミッドセンチュリー',d:'1950年代の近未来感。デザイナーズ家具が主役。'},{n:'ボヘミアン',d:'民族柄・多色使いで旅人のような自由な空間。'}]},
-D:{title:'エキゾチック＆ネイチャー派',sub:'自然と自由を愛するあなたには、開放感あふれるリゾート感や植物に囲まれた空間がぴったり。',img:'diag-type-d.png',picks:[{n:'リゾートスタイル',d:'ラタン・アジアン家具でバリ島や南国の別荘風に。'},{n:'ボタニカルスタイル',d:'植物が主役。緑に飲み込まれるような癒やしの森。'},{n:'西海岸スタイル',d:'デニム・海・褪せたブルー。カリフォルニアの自由な風。'},{n:'ボヘミアン',d:'民族柄・多色使いで旅人のようにアーティスティックに。'}]},
-E:{title:'ハイクラス＆トラディショナル派',sub:'本物志向で上質な暮らしに憧れるあなたには、格式と品格のある空間が似合います。',img:'diag-type-e.png',picks:[{n:'ラグジュアリースタイル',d:'大理石・金・ベルベット。成功者の華やかな部屋。'},{n:'和モダンスタイル',d:'畳・障子・木格子を現代風にアレンジした静寂の美。'},{n:'ホテルライク',d:'整然とした非日常空間。高級ホテルの雰囲気を自宅に。'},{n:'ミッドセンチュリー',d:'本物のデザイナーズ家具が主役の個性的なスタイル。'}]},
-F:{title:'フェミニン＆ノスタルジック派',sub:'感受性豊かで可愛いものに心が動くあなたには、柔らかく温かみのある物語を感じる空間がぴったり。',img:'diag-type-f.png',picks:[{n:'シャビーシックスタイル',d:'剥げた白塗装にレース・アンティーク。古くて上品な空間。'},{n:'カントリースタイル',d:'パイン材とチェック柄。赤毛のアンのような家庭的な温かさ。'},{n:'韓国スタイル',d:'アイボリーとベージュの淡い空間。丸いフォルムで映えを演出。'},{n:'ボタニカルスタイル',d:'花と植物に囲まれた、やさしい癒やしの部屋。'}]}
+A:{t:'シンプル＆ナチュラル派',s:'清潔感と温もりを大切にするあなたには、機能的でありながら自然素材の温かみを感じる空間が似合います。',img:'diag-type-a.png',picks:[{n:'北欧スタイル',d:'機能的で明るい。差し色にブルーやイエローを。'},{n:'ナチュラルスタイル',d:'木の温もり全開。最も標準的で落ち着く定番。'},{n:'ジャパンディスタイル',d:'和×北欧の融合。今一番人気の静のスタイル。'},{n:'韓国スタイル',d:'白×ベージュ。丸いフォルムと淡い空間が特徴。'}]},
+B:{t:'クール＆スタイリッシュ派',s:'無駄を嫌い、洗練されたものを好むあなたには、モノトーンで構成されたスタイリッシュな空間がぴったり。',img:'diag-type-b.png',picks:[{n:'モダンスタイル',d:'モノトーン・ガラス・金属で都会の夜が似合う空間。'},{n:'シンプルモダン',d:'装飾ゼロ。ミニマリストの究極形。'},{n:'ホテルライク',d:'左右対称の美。高級ホテルのような整然とした空間。'},{n:'インダストリアル',d:'鉄とコンクリート。無骨でクールな工場系スタイル。'}]},
+C:{t:'レトロ＆ラフ派',s:'こだわりが強く自分らしさを大切にするあなたには、経年変化や歴史を感じる素材感のある空間が合います。',img:'diag-type-c.png',picks:[{n:'ヴィンテージスタイル',d:'濃い茶色と革。歴史を感じる渋いスタイル。'},{n:'インダストリアル',d:'鉄・コンクリート・剥き出しの配管。工場のような無骨さ。'},{n:'ミッドセンチュリー',d:'1950年代の近未来感。デザイナーズ家具が主役。'},{n:'ボヘミアン',d:'民族柄・多色使いで旅人のような自由な空間。'}]},
+D:{t:'エキゾチック＆ネイチャー派',s:'自然と自由を愛するあなたには、開放感あふれるリゾート感や植物に囲まれた空間がぴったり。',img:'diag-type-d.png',picks:[{n:'リゾートスタイル',d:'ラタン・アジアン家具でバリ島や南国の別荘風に。'},{n:'ボタニカルスタイル',d:'植物が主役。緑に飲み込まれるような癒やしの森。'},{n:'西海岸スタイル',d:'デニム・海・褪せたブルー。カリフォルニアの自由な風。'},{n:'ボヘミアン',d:'民族柄・多色使いで旅人のようにアーティスティックに。'}]},
+E:{t:'ハイクラス＆トラディショナル派',s:'本物志向で上質な暮らしに憧れるあなたには、格式と品格のある空間が似合います。',img:'diag-type-e.png',picks:[{n:'ラグジュアリースタイル',d:'大理石・金・ベルベット。成功者の華やかな部屋。'},{n:'和モダンスタイル',d:'畳・障子・木格子を現代風にアレンジした静寂の美。'},{n:'ホテルライク',d:'整然とした非日常空間。高級ホテルの雰囲気を自宅に。'},{n:'ミッドセンチュリー',d:'本物のデザイナーズ家具が主役の個性的なスタイル。'}]},
+F:{t:'フェミニン＆ノスタルジック派',s:'感受性豊かで可愛いものに心が動くあなたには、柔らかく温かみのある物語を感じる空間がぴったり。',img:'diag-type-f.png',picks:[{n:'シャビーシックスタイル',d:'剥げた白塗装にレース・アンティーク。古くて上品な空間。'},{n:'カントリースタイル',d:'パイン材とチェック柄。赤毛のアンのような家庭的な温かさ。'},{n:'韓国スタイル',d:'アイボリーとベージュの淡い空間。丸いフォルムで映えを演出。'},{n:'ボタニカルスタイル',d:'花と植物に囲まれた、やさしい癒やしの部屋。'}]}
 };
 function qc(i){return document.querySelectorAll('.qc')[i];}
 function sel(qi,val){ans[qi]=val;qc(qi).querySelectorAll('.opt').forEach(o=>o.classList.toggle('selected',o.dataset.val===val));document.getElementById('n'+qi).disabled=false;}
@@ -234,13 +145,12 @@ function showR(){
   document.getElementById('prog').style.width='100%';
   const rw=document.getElementById('result');rw.style.display='block';
   document.getElementById('rb').textContent='あなたは '+top+' タイプ';
-  document.getElementById('rt').innerHTML=r.title;
-  document.getElementById('rs').textContent=r.sub;
-  document.getElementById('ri').innerHTML='<img src="'+r.img+'" alt="'+r.title+'" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">';
+  document.getElementById('rt').innerHTML=r.t;
+  document.getElementById('rs').textContent=r.s;
+  document.getElementById('ri').innerHTML='<img src="'+r.img+'" alt="'+r.t+'" style="width:100%;height:100%;object-fit:cover;border-radius:4px;">';
   document.getElementById('sp').innerHTML=r.picks.map(p=>'<div class="spc"><h4>'+p.n+'</h4><p>'+p.d+'</p></div>').join('');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 function reset(){ans.fill(null);document.querySelectorAll('.qc').forEach((c,i)=>{c.style.display='';c.classList.toggle('active',i===0);});document.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));document.querySelectorAll('[id^=n]').forEach(b=>{if(b.tagName==='BUTTON')b.disabled=true;});document.getElementById('result').style.display='none';document.getElementById('prog').style.width='0%';window.scrollTo({top:0,behavior:'smooth'});}
-</script>
-</body>
+</script></body>
 </html>
